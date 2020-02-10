@@ -1,0 +1,303 @@
+
+    <script src="https://unpkg.com/gauge-chart@0.5.1/dist/bundle.js"></script>
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-4 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Process Health</h5>
+                      <span class="h2 font-weight-bold mb-0">350,897</span>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                          <i class="fas fa-chart-bar"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="gaugeArea2"></div>
+                    <script>
+                        // Element inside which you want to see the chart.
+                
+                        //let element1 = document.querySelector('#gaugeArea1')
+                      let element = document.querySelector('#gaugeArea2')
+                      
+                        //let element4 = document.querySelector('#gaugeArea4')
+                      
+                      // let options1 = {
+                        // arcColors: ['rgb(44, 151, 222)', 'lightgray'],
+                        // arcDelimiters: [80],
+                        // rangeLabel: ['0%', '100%'],
+                        //  centralLabel: '70%',
+                        //}
+                      
+                        let options = {
+                          hasNeedle: true,
+                          needleColor: 'black',
+                          arcColors: ['red','yellow','lightgreen','green'],
+                          arcDelimiters: [70,85,90],
+                          rangeLabel: ['0', '100'],
+                          needleStartValue: 0,
+                        }
+                       // let options3 = {
+                       //   hasNeedle: true,
+                       //   needleColor: 'black',
+                       //   arcColors: ['red','yellow','lightgreen','green'],
+                        //  arcDelimiters: [70,85,90],
+                       //   rangeLabel: ['0', '100'],
+                      //    needleStartValue: 0,
+                     //   }
+                      //  let options3 = {
+                      //    hasNeedle: true,
+                        //  outerNeedle: true,
+                      //    needleColor: 'rgb(166, 206, 227)',
+                      //   arcDelimiters: [],
+                      //   rangeLabel: ['-10', '10'],
+                      //    centralLabel: '2',
+                      //    rangeLabelFontSize: 42,
+                      // }
+                
+                        // let zebraArcDelimiters = []
+                        // let zebraArcColors = []
+                        // zebraArcColors.push('black')
+                        // for (let i = 2; i < 100; i = i + 2) {
+                        //   zebraArcDelimiters.push(i)
+                        //   i % 4 ? zebraArcColors.push('white') : zebraArcColors.push('black')
+                        // }
+                        // zebraArcColors.push('black')
+                      
+                        // let options4 = {
+                        //   hasNeedle: true,
+                        //   needleColor: 'black',
+                        //   arcDelimiters: zebraArcDelimiters,
+                        //   arcColors: zebraArcColors,
+                        //   centralLabel: 'zebra',
+                        // }  
+                
+                      //  let options5 = {
+                      //    hasNeedle: true,
+                      //    needleColor: 'black',
+                      //   arcColors: [],
+                    //     arcDelimiters: [10, 60, 90],
+                      //    arcPadding: 6,
+                      //   arcPaddingColor: 'white',
+                      //   arcLabels: ['35', '210', '315'],
+                      //    arcLabelFontSize: false,
+                          //arcOverEffect: false,
+                          // label options
+                      //   rangeLabel: ['0', '350'],
+                      //   centralLabel: '175',
+                        //  rangeLabelFontSize: false,
+                        //  labelsFont: 'Consolas',
+                        //}
+                
+                        // Drawing and updating the chart.  
+                        // GaugeChart
+                         // .gaugeChart(element, 300, options1)
+                         // .updateNeedle(70)
+                      
+                         GaugeChart
+                          .gaugeChart(element, 300, options)
+                          .updateNeedle(90)
+                      
+                      //  GaugeChart
+                        // .gaugeChart(element3, 400, options3)
+                      //   .updateNeedle(60)
+                      
+                      //  GaugeChart
+                        //  .gaugeChart(element4, 400, options5)
+                      //    .updateNeedle(30)
+                
+                        
+                      </script>
+                    
+                      
+                    
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Accuracy</h5>
+                        <span class="h2 font-weight-bold mb-0">80.65%</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                          <i class="fas fa-percent"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="gaugeArea3"></div>
+
+
+                    <p class="mt-3 mb-0 text-muted text-sm">
+                      <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
+                      <span class="text-nowrap">Since last month</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <div class="col-xl-4 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Volumetric</h5>
+                      <span class="h2 font-weight-bold mb-0">924</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <style>
+                      progress[value] {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 220px;
+                        height: 20px;
+                      }
+                      progress[value]::-webkit-progress-bar {
+                        background-color: #eee;
+                        box-shadow: 0 0 3px #666 inset;
+                      }
+                      progress[value]::-webkit-progress-value {
+                        background: -webkit-linear-gradient(-45deg, transparent 30%, #118EB0 80%, transparent 30%),
+                        -webkit-linear-gradient(top, #118EB0, #118EB0),
+                        -webkit-linear-gradient(right, #118EB0, #118EB0);
+                        background-size: 40px 20px,  10%;
+                      }
+                    </style>
+                  <p>MTD:
+                      <progress value="35" max="100"></progress>
+                      <span>35</span>
+                    </p>
+                    <p>Current Week:
+                      <progress value="80" max="100"></progress>
+                      <span>80</span>
+                    </p>
+                <p>Today:
+                      <progress value="80" max="100"></progress>
+                      <span>80</span>
+                    </p>
+                  <div id="gaugeArea3"></div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                    <span class="text-nowrap">Since yesterday</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        // Element inside which you want to see the chart.
+
+        //let element1 = document.querySelector('#gaugeArea1')
+      
+      let element3 = document.querySelector('#gaugeArea3')
+        //let element4 = document.querySelector('#gaugeArea4')
+      
+      // let options1 = {
+        // arcColors: ['rgb(44, 151, 222)', 'lightgray'],
+        // arcDelimiters: [80],
+        // rangeLabel: ['0%', '100%'],
+        //  centralLabel: '70%',
+        //}
+      
+       // let options = {
+       //   hasNeedle: true,
+       //   needleColor: 'black',
+       //   arcColors: ['red','yellow','lightgreen','green'],
+       //   arcDelimiters: [70,85,90],
+       //   rangeLabel: ['0', '100'],
+       //   needleStartValue: 0,
+       // }
+        let options3 = {
+          hasNeedle: true,
+          needleColor: 'black',
+          arcColors: ['red','yellow','lightgreen','green'],
+          arcDelimiters: [70,85,90],
+          rangeLabel: ['0', '100'],
+          needleStartValue: 0,
+        }
+      //  let options3 = {
+      //    hasNeedle: true,
+        //  outerNeedle: true,
+      //    needleColor: 'rgb(166, 206, 227)',
+      //   arcDelimiters: [],
+      //   rangeLabel: ['-10', '10'],
+      //    centralLabel: '2',
+      //    rangeLabelFontSize: 42,
+      // }
+
+        // let zebraArcDelimiters = []
+        // let zebraArcColors = []
+        // zebraArcColors.push('black')
+        // for (let i = 2; i < 100; i = i + 2) {
+        //   zebraArcDelimiters.push(i)
+        //   i % 4 ? zebraArcColors.push('white') : zebraArcColors.push('black')
+        // }
+        // zebraArcColors.push('black')
+      
+        // let options4 = {
+        //   hasNeedle: true,
+        //   needleColor: 'black',
+        //   arcDelimiters: zebraArcDelimiters,
+        //   arcColors: zebraArcColors,
+        //   centralLabel: 'zebra',
+        // }  
+
+      //  let options5 = {
+      //    hasNeedle: true,
+      //    needleColor: 'black',
+      //   arcColors: [],
+    //     arcDelimiters: [10, 60, 90],
+      //    arcPadding: 6,
+      //   arcPaddingColor: 'white',
+      //   arcLabels: ['35', '210', '315'],
+      //    arcLabelFontSize: false,
+          //arcOverEffect: false,
+          // label options
+      //   rangeLabel: ['0', '350'],
+      //   centralLabel: '175',
+        //  rangeLabelFontSize: false,
+        //  labelsFont: 'Consolas',
+        //}
+
+        // Drawing and updating the chart.  
+        // GaugeChart
+         // .gaugeChart(element, 300, options1)
+         // .updateNeedle(70)
+      
+         GaugeChart
+          .gaugeChart(element3, 300, options)
+          .updateNeedle(70)
+      
+      //  GaugeChart
+        // .gaugeChart(element3, 400, options3)
+      //   .updateNeedle(60)
+      
+      //  GaugeChart
+        //  .gaugeChart(element4, 400, options5)
+      //    .updateNeedle(30)
+
+        
+      </script>
